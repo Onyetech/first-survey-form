@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		Decagon Assessment Survey
+	</title>
+
+	<style>
+		html { 
+  background: url(template.jpg) no-repeat 
+    center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+   background-size: cover;
+  
+}
+
+		/* Styling the Body element i.e. Color,
+		Font, Alignment */
+		body {
+			/* background-color: #05c46b; */
+			font-family: Verdana;
+			text-align: center;
+			
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input,
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		button {
+			background-color: blue;
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 21px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+        .paragraph{
+            max-width: 700px;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+			font-weight: bold;
+        }
+       /* [disabled]{
+		   background-color: red;
+	   } */
+	   /* .nav-item1, .nav-item2, .nav-item3, .nav-item4 {
+		   display:inline;
+		   padding:10px;
+		   border-color: yellow;
+		   
+	   }
+	   .nav-item1 {
+		   background-color:green;
+		   color: white;
+	   }
+	   .nav-section {
+		   padding: 10px;
+		   border: 1px solid #777;
+		   background-color: white;
+	   } */
+	   h2 {
+		   color: blue;
+	   }
+	   
+	</style>
+</head>
+
+<body>
+	
+
+    <h2>Decagon Assessment Survey Form</h2>
+    <p> 
+        Dear Decagon aspirant, having come this far in your Decagon journey of becoming a software engineer, <br>would you spare us 
+        a minute out of your time to let us know how you feels about the assessment so far.
+    </p>
+    
+	<!-- Create Form -->
+	<!-- <div class="nav-section">
+		<nav class="main-nav-item">
+			<ul class="nav-items">
+				<li class="nav-item1"> <a href="#">Home</a> </li>
+				<li class="nav-item2"> <a href="#">About us</a> </li>
+				<li class="nav-item3"> <a href="#">Services</a> </li>
+				<li class="nav-item4"> <a href="#">Contact us</a> </li>
+			</ul>
+		</nav>
+	</div> -->
+	<form id="form">
+
+		<!-- Details -->
+		<div class="form-control">
+			<label for="name" id="label-name">
+				Name
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="name"
+				placeholder="Enter your name..." required/>
+		</div>
+
+		<div class="form-control">
+			<label for="email" id="label-email">
+				Email
+			</label>
+
+			<!-- Input Type Email-->
+			<input type="email"
+				id="email"
+				placeholder="Enter your email..." required/>
+		</div>
+
+		<div class="form-control">
+			<label for="age" id="label-age">
+				Choose your age range
+			</label>
+
+			
+
+			<!-- Input Type Text -->
+			<input type="range" name="amountRange" 
+				  min="0" max="40" value="20" step="2" oninput="this.form.amountInput.value=this.value" required/>
+
+			<input type="number" name="amountInput" 
+				  min="0" max="40" placeholder="Pull for age or enter here..." step="2" oninput="this.form.amountRange.value=this.value" required/>
+		</div>
+		<!-- <div>
+			<button disabled>SUBMIT</button>
+		</div> -->
+        <div class="form-control">
+			<label for="sample-password" id="sample-password">
+				Password
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="password"
+				id="password"
+				placeholder="Enter sample password" required/>
+		</div>
+
+		<div class="form-control">
+			<label for="role" id="label-role">
+				Which option best describes you?
+			</label>
+			
+			<!-- Dropdown options -->
+			<select name="role" id="role" class="drop-down">
+				<option value="student">Student</option>
+				<option value="intern">Graduate</option>
+				<option value="professional">
+					Served
+				</option>
+				<option value="other">Other</option>
+			</select>
+		</div>
+
+		<div class="form-control">
+			<label>
+				Would you recommed Decagon
+				to a friend?
+			</label>
+
+			<!-- Input Type Radio Button -->
+			<label for="recommed-1">
+				<input type="radio"
+					id="recommed-1"
+					name="recommed">Yes</input>
+			</label>
+			<label for="recommed-2">
+				<input type="radio"
+					id="recommed-2"
+					name="recommed">No</input>
+			</label>
+			<label for="recommed-3">
+				<input type="radio"
+					id="recommed-3"
+					name="recommed">Maybe</input>
+			</label>
+		</div>
+
+		<div class="form-control">
+			<label>What 3 Decagon Stacks do you love?
+				<small>(Check only three)</small>
+			</label>
+			<!-- Input Type Checkbox -->
+			
+			<label for="inp-2">
+				<input type="checkbox"
+					name="inp">C++</input></label>
+			<label for="inp-3">
+				<input type="checkbox"
+					name="inp">C#</input></label>
+			<label for="inp-4">
+				<input type="checkbox"
+					name="inp">Java</input></label>
+			<label for="inp-5">
+				<input type="checkbox"
+					name="inp">Python</input></label>
+			<label for="inp-6">
+				<input type="checkbox"
+					name="inp">JavaScript</input></label>
+			<label for="inp-7">
+				<input type="checkbox"
+					name="inp">React</input></label>
+			<label for="inp-7">
+				
+		</div>
+
+		<div class="form-control">
+			<label for="comment">
+				Any comments or suggestions
+			</label>
+
+			<!-- multi-line text input control -->
+			<textarea name="comment" id="comment"
+				placeholder="Enter your comment here">
+			</textarea>
+		</div>
+
+		<!-- Multi-line Text Input Control -->
+		<button type="submit" value="submit">
+			Submit
+		</button>
+	</form>
+</body>
+
+</html>
